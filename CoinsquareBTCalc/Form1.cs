@@ -43,6 +43,25 @@ namespace CoinsquareBTCalc
             }
         }
 
+        private void uxPrice_Leave(object sender, EventArgs e)
+        {
+            if (Convert.ToDouble(uxPrice.Text) != 0)
+            {
+                var temp = 1 / Convert.ToDouble(uxPrice.Text);
+                uxPriceBTC2.Text = temp.ToString("0.############");
+            }
+
+        }
+
+        private void uxQuantityAmount_Leave(object sender, EventArgs e)
+        {
+            if (Convert.ToDouble(uxQuantityAmount.Text) != 0)
+            {
+                var temp = Convert.ToDouble(uxPriceBTC2.Text) * Convert.ToDouble(uxQuantityAmount.Text);
+                uxBTCaSale.Text = temp.ToString("#.########");
+            }
+        }
+
         //&& (Convert.ToDouble(uxBTCcurrPrice.Text) != 0)
     }
 }
