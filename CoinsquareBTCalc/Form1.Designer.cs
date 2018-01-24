@@ -39,6 +39,8 @@
             this.uxBTCquantity = new System.Windows.Forms.TextBox();
             this.uxBTCcurrPrice = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.uxBTCaSale = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.uxPrice = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.uxBTCaSale = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -171,9 +171,28 @@
             this.tabPage2.Text = "Sell";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Location = new System.Drawing.Point(24, 104);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "BTC after sale:";
+            // 
+            // uxBTCaSale
+            // 
+            this.uxBTCaSale.Location = new System.Drawing.Point(132, 101);
+            this.uxBTCaSale.Name = "uxBTCaSale";
+            this.uxBTCaSale.ReadOnly = true;
+            this.uxBTCaSale.Size = new System.Drawing.Size(162, 20);
+            this.uxBTCaSale.TabIndex = 3;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(24, 78);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 13);
@@ -238,24 +257,6 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // uxBTCaSale
-            // 
-            this.uxBTCaSale.Location = new System.Drawing.Point(132, 101);
-            this.uxBTCaSale.Name = "uxBTCaSale";
-            this.uxBTCaSale.ReadOnly = true;
-            this.uxBTCaSale.Size = new System.Drawing.Size(162, 20);
-            this.uxBTCaSale.TabIndex = 3;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(24, 104);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "BTC after sale:";
             // 
             // Form1
             // 
