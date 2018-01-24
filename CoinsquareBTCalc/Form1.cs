@@ -30,7 +30,7 @@ namespace CoinsquareBTCalc
             if (Convert.ToDouble(uxBTCcurrPrice.Text) != 0 )
             {
                 var temp =  (1 / Convert.ToDouble(uxBTCcurrPrice.Text));
-                uxPriceBTC.Text = temp.ToString("0.############");
+                uxPriceBTC.Text = temp.ToString("0.########");
             }
         }
 
@@ -39,7 +39,7 @@ namespace CoinsquareBTCalc
             if (Convert.ToDouble(uxBTCcurrPrice.Text) != 0 || uxBTCcurrPrice.Text != null)
             {
                 var temp = Convert.ToDouble(uxBTCquantity.Text) / Convert.ToDouble(uxPriceBTC.Text);
-                uxQuantityCAD.Text = temp.ToString("#.###");
+                uxQuantityCAD.Text = temp.ToString("#.##");
             }
         }
 
@@ -48,7 +48,7 @@ namespace CoinsquareBTCalc
             if (Convert.ToDouble(uxPrice.Text) != 0)
             {
                 var temp = 1 / Convert.ToDouble(uxPrice.Text);
-                uxPriceBTC2.Text = temp.ToString("0.############");
+                uxPriceBTC2.Text = temp.ToString("0.########");
             }
 
         }
