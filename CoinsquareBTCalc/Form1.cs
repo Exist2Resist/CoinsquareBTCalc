@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace CoinsquareBTCalc
 {
@@ -20,9 +21,10 @@ namespace CoinsquareBTCalc
         private void Form1_Load(object sender, EventArgs e)
         {
             //grab last sale price from coinsquare
-            //keep in file for historical reasont
+            //keep in file for historical reasons
             //https://coinsquare.io/markets/bitcoin
             //<div class="etbCGx">13,869.63</div>
+            toolStripStatusLabel1.Text = "$";
         }
 
         private void uxBTCcurrPrice_Leave(object sender, EventArgs e)
@@ -62,6 +64,30 @@ namespace CoinsquareBTCalc
             }
         }
 
-        //&& (Convert.ToDouble(uxBTCcurrPrice.Text) != 0)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenCalc();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenCalc();
+        }
+
+        private void OpenCalc()
+        {
+            var calc = "/C calc.exe";
+            Process p = new Process();
+            p.StartInfo.UseShellExecute = true;
+            p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.Arguments = calc;
+            p.Start();
+        }
+
+        private void tBTCpriceRefresh_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "$ 14,622.02";
+        }
     }
 }

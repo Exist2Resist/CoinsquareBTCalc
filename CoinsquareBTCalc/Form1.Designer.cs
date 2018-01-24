@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -48,12 +49,15 @@
             this.uxQuantityAmount = new System.Windows.Forms.TextBox();
             this.uxPriceBTC2 = new System.Windows.Forms.TextBox();
             this.uxPrice = new System.Windows.Forms.TextBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.sBTCprice = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tBTCpriceRefresh = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.sBTCprice.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -68,6 +72,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
@@ -156,6 +161,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.uxBTCaSale);
             this.tabPage2.Controls.Add(this.label7);
@@ -243,15 +249,15 @@
             this.uxPrice.TabIndex = 0;
             this.uxPrice.Leave += new System.EventHandler(this.uxPrice_Leave);
             // 
-            // statusStrip1
+            // sBTCprice
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sBTCprice.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 186);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(403, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
+            this.sBTCprice.Location = new System.Drawing.Point(0, 186);
+            this.sBTCprice.Name = "sBTCprice";
+            this.sBTCprice.Size = new System.Drawing.Size(403, 22);
+            this.sBTCprice.TabIndex = 1;
+            this.sBTCprice.Text = "$";
             // 
             // toolStripStatusLabel1
             // 
@@ -259,12 +265,38 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(307, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Open Calc";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(307, 22);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Open Calc";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // tBTCpriceRefresh
+            // 
+            this.tBTCpriceRefresh.Enabled = true;
+            this.tBTCpriceRefresh.Interval = 30000;
+            this.tBTCpriceRefresh.Tick += new System.EventHandler(this.tBTCpriceRefresh_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 208);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.sBTCprice);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -275,8 +307,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.sBTCprice.ResumeLayout(false);
+            this.sBTCprice.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,7 +319,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -305,6 +336,10 @@
         private System.Windows.Forms.TextBox uxPrice;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox uxBTCaSale;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Timer tBTCpriceRefresh;
+        public System.Windows.Forms.StatusStrip sBTCprice;
     }
 }
 
